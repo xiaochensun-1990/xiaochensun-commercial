@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>联系 — 矩空间摄影</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #fff;
+    color: #111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    background: #fff;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+}
+
+.logo-cn {
+
+    font-family:
+        "LiSu",
+        "隶书",
+        "STLiti",
+        "FZLiShu-S01",
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: 7px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.logo-en {
+
+    margin-top: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2.1px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+.nav-item {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+
+    text-align: center;
+
+    width: max-content;
+}
+
+.nav-cn {
+
+    display: block;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.nav-en {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact-page {
+
+    min-height: 100vh;
+
+    padding-top: 170px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.contact-content {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    text-align: center;
+}
+
+
+/* TITLE */
+
+.contact-title {
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+    margin-bottom: 60px;
+}
+
+
+/* NAME */
+
+.contact-name {
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+    margin-bottom: 45px;
+}
+
+
+/* CONTACT ITEMS */
+
+.contact-item {
+
+    margin-bottom: 28px;
+}
+
+.contact-label {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.contact-value {
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    line-height: 1.6;
+}
+
+.contact-value a {
+
+    color: #111;
+
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        height: 78px;
+
+        padding: 0 18px;
+    }
+
+    .logo-cn {
+
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+    .logo-en {
+
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
+    nav {
+
+        gap: 16px;
+    }
+
+    .nav-cn {
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .nav-en {
+
+        margin-top: 4px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.7px;
+    }
+
+    .contact-page {
+
+        padding-top: 125px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .contact-title {
+
+        font-size: 15px;
+
+        margin-bottom: 45px;
+    }
+
+    .contact-name {
+
+        font-size: 17px;
+
+        margin-bottom: 35px;
+    }
+
+    .contact-item {
+
+        margin-bottom: 25px;
+    }
+
+    .contact-value {
+
+        font-size: 13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <div class="logo-cn">
+                矩空间摄影
+            </div>
+
+            <div class="logo-en">
+                Gnomon Space Photography
+            </div>
+
+        </a>
+
+    </div>
+
+
+
+    <nav>
+
+
+        <a
+            class="nav-item"
+            href="projects.html"
+        >
+
+            <div class="nav-cn">
+                酒店 / 民宿 / 建筑
+            </div>
+
+            <div class="nav-en">
+                COMMERCIAL SPACE
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="about.html"
+        >
+
+            <div class="nav-cn">
+                关于
+            </div>
+
+            <div class="nav-en">
+                ABOUT
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="contact.html"
+        >
+
+            <div class="nav-cn">
+                联系
+            </div>
+
+            <div class="nav-en">
+                CONTACT
+            </div>
+
+        </a>
+
+
+    </nav>
+
+
+</header>
+
+
+
+<main class="contact-page">
+
+
+    <div class="contact-content">
+
+
+        <div class="contact-title">
+
+            CONTACT
+
+        </div>
+
+
+
+        <div class="contact-name">
+
+            XIAOCHEN SUN
+
+        </div>
+
+
+
+        <div class="contact-item">
+
+            <div class="contact-label">
+
+                EMAIL
+
+            </div>
+
+            <div class="contact-value">
+
+                <a href="mailto:">
+
+                    <!-- 在这里填写你的邮箱 -->
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-item">
+
+            <div class="contact-label">
+
+                WECHAT
+
+            </div>
+
+            <div class="contact-value">
+
+                <!-- 在这里填写你的微信号 -->
+
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-item">
+
+            <div class="contact-label">
+
+                INSTAGRAM
+
+            </div>
+
+            <div class="contact-value">
+
+                <!-- 在这里填写你的 Instagram -->
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+</html>

@@ -84,15 +84,24 @@ header {
 }
 
 
-/* Chinese brand */
+/* =========================
+   CHINESE BRAND
+   ========================= */
 
 .logo-cn {
 
+    /*
+       优先使用隶书字体。
+       Windows / macOS / iOS
+       如果系统存在对应字体，
+       会优先显示真正的隶书。
+    */
+
     font-family:
-        "STKaiti",
-        "KaiTi",
-        "Kaiti SC",
-        "BiauKai",
+        "LiSu",
+        "隶书",
+        "STLiti",
+        "FZLiShu-S01",
         serif;
 
     font-size: 34px;
@@ -107,7 +116,9 @@ header {
 }
 
 
-/* English subtitle */
+/* =========================
+   ENGLISH BRAND
+   ========================= */
 
 .logo-en {
 
@@ -144,7 +155,7 @@ nav {
 }
 
 
-/* Navigation item */
+/* Each navigation item */
 
 .nav-item {
 
@@ -155,12 +166,23 @@ nav {
     color: #111;
 
     text-align: left;
+
+    /*
+       让中文和英文从完全相同的
+       左侧起点开始。
+    */
+
+    width: max-content;
 }
 
 
-/* Chinese navigation */
+/* =========================
+   NAVIGATION — CHINESE
+   ========================= */
 
 .nav-cn {
+
+    display: block;
 
     font-size: 17px;
 
@@ -170,13 +192,19 @@ nav {
 
     line-height: 1;
 
+    text-align: left;
+
     white-space: nowrap;
 }
 
 
-/* English navigation */
+/* =========================
+   NAVIGATION — ENGLISH
+   ========================= */
 
 .nav-en {
+
+    display: block;
 
     margin-top: 7px;
 
@@ -192,6 +220,8 @@ nav {
     font-weight: 700;
 
     line-height: 1;
+
+    text-align: left;
 
     white-space: nowrap;
 }

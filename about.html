@@ -191,16 +191,52 @@ nav {
 
 .about-page {
 
-    max-width: 950px;
+    width: 100%;
 
-    margin: 0 auto;
+    min-height: 100vh;
 
     padding-top: 155px;
 
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 35px;
+    padding-right: 35px;
 
     padding-bottom: 100px;
+
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+}
+
+
+/* =========================
+   LEFT SPACE
+   ========================= */
+
+.about-left {
+
+    width: 100%;
+
+    min-height: 400px;
+}
+
+
+/* =========================
+   RIGHT CONTENT
+   ========================= */
+
+.about-content {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    padding-left: 60px;
+
+    padding-right: 30px;
+
+    margin-left: auto;
+
+    text-align: left;
 }
 
 
@@ -233,8 +269,6 @@ nav {
     letter-spacing: 0.15px;
 
     margin-bottom: 65px;
-
-    max-width: 820px;
 }
 
 .about-en p {
@@ -281,8 +315,6 @@ nav {
     line-height: 2;
 
     letter-spacing: 0;
-
-    max-width: 820px;
 
     word-break: normal;
 
@@ -360,14 +392,33 @@ nav {
 
     .about-page {
 
-        max-width: none;
+        display: block;
 
         padding-top: 110px;
 
         padding-left: 20px;
+
         padding-right: 20px;
 
         padding-bottom: 50px;
+    }
+
+
+    .about-left {
+
+        display: none;
+    }
+
+
+    .about-content {
+
+        max-width: none;
+
+        padding-left: 0;
+
+        padding-right: 0;
+
+        margin-left: 0;
     }
 
 
@@ -510,129 +561,171 @@ nav {
 <main class="about-page">
 
 
-    <div class="about-title">
-        ABOUT
+    <!-- =====================
+         LEFT
+         FUTURE SPACE
+         ===================== -->
+
+    <div class="about-left">
+
+        <!--
+
+        这里以后可以放：
+
+        SERVICES
+
+        ARCHITECTURE
+        HOTEL
+        HOSPITALITY
+        INTERIOR
+        COMMERCIAL SPACE
+
+        或者：
+
+        PRICING
+        RATE CARD
+
+        当前保持留白。
+
+        -->
+
     </div>
 
 
 
     <!-- =====================
-         ENGLISH FIRST
+         RIGHT
          ===================== -->
 
-    <div class="about-en">
+    <div class="about-content">
 
 
-        <p>
-
-            <strong>Tom Sun</strong> holds a Master's degree
-            in Geological Engineering from Southwest Petroleum
-            University. He has worked extensively in documentary
-            photography and visual art, with a practice centred
-            on the relationship between place, architecture,
-            people and their surrounding environments. His work
-            has been published internationally across media and
-            photographic publications.
-
-        </p>
-
-
-        <p>
-
-            His approach to space photography has grown naturally
-            from his documentary practice. For Sun, a space is more
-            than architecture itself; it is a visual field shaped
-            by human activity, time, light and local culture.
-            Rather than simply recording architectural form,
-            he is interested in the atmosphere, scale, materiality
-            and traces of life within a place, using photography
-            to explore the relationship between people and the
-            spaces they inhabit.
-
-        </p>
-
-
-        <p>
-
-            In recent years, he has extended this documentary
-            approach into commercial photography, working across
-            hotels, boutique guesthouses, restaurants, art spaces
-            and architectural projects. He pays close attention
-            to natural light, architectural structure, materials
-            and atmosphere, while maintaining the observational
-            sensitivity developed through years of documentary work.
-
-        </p>
-
-
-        <p>
-
-            His approach seeks to move beyond straightforward
-            architectural representation. Through an attentive
-            and contemporary visual language, he presents spaces
-            as places with character, memory and narrative —
-            images that serve the needs of architects, designers
-            and hospitality brands while retaining the depth
-            and authenticity of documentary photography.
-
-        </p>
-
-
-    </div>
+        <div class="about-title">
+            ABOUT
+        </div>
 
 
 
-    <div class="divider"></div>
+        <!-- =====================
+             ENGLISH
+             ===================== -->
+
+        <div class="about-en">
+
+
+            <p>
+
+                <strong>Tom Sun</strong> holds a Master's degree
+                in Geological Engineering from Southwest Petroleum
+                University. He has worked extensively in documentary
+                photography and visual art, with a practice centred
+                on the relationship between place, architecture,
+                people and their surrounding environments. His work
+                has been published internationally across media and
+                photographic publications.
+
+            </p>
+
+
+            <p>
+
+                His approach to space photography has grown naturally
+                from his documentary practice. For Sun, a space is more
+                than architecture itself; it is a visual field shaped
+                by human activity, time, light and local culture.
+                Rather than simply recording architectural form,
+                he is interested in the atmosphere, scale, materiality
+                and traces of life within a place, using photography
+                to explore the relationship between people and the
+                spaces they inhabit.
+
+            </p>
+
+
+            <p>
+
+                In recent years, he has extended this documentary
+                approach into commercial photography, working across
+                hotels, boutique guesthouses, restaurants, art spaces
+                and architectural projects. He pays close attention
+                to natural light, architectural structure, materials
+                and atmosphere, while maintaining the observational
+                sensitivity developed through years of documentary work.
+
+            </p>
+
+
+            <p>
+
+                His approach seeks to move beyond straightforward
+                architectural representation. Through an attentive
+                and contemporary visual language, he presents spaces
+                as places with character, memory and narrative —
+                images that serve the needs of architects, designers
+                and hospitality brands while retaining the depth
+                and authenticity of documentary photography.
+
+            </p>
+
+
+        </div>
 
 
 
-    <!-- =====================
-         CHINESE SECOND
-         ===================== -->
-
-    <div class="about-cn">
+        <div class="divider"></div>
 
 
-        <p>
 
-            <strong>Tom Sun</strong> 毕业于西南石油大学，
-            获地质工程硕士学位。长期从事纪实摄影与视觉创作，
-            作品关注地域、建筑、人的生活以及社会环境之间的关系，
-            并发表于国内外媒体及出版物。
+        <!-- =====================
+             CHINESE
+             ===================== -->
 
-        </p>
+        <div class="about-cn">
 
 
-        <p>
+            <p>
 
-            在长期的纪实摄影实践中，他形成了对空间独特的观察方式：
-            空间不仅是建筑本身，也是人的活动、时间、光线与地方文化
-            共同构成的视觉现场。与单纯记录建筑形式不同，
-            他更关注空间所承载的气息、尺度、秩序与生活痕迹，
-            并尝试通过摄影建立人与建筑之间的情感联系。
+                <strong>Tom Sun</strong> 毕业于西南石油大学，
+                获地质工程硕士学位。长期从事纪实摄影与视觉创作，
+                作品关注地域、建筑、人的生活以及社会环境之间的关系，
+                并发表于国内外媒体及出版物。
 
-        </p>
-
-
-        <p>
-
-            近年来，他将纪实摄影的观察方法延伸至酒店、民宿、
-            餐厅、艺术空间及建筑项目的拍摄。在商业空间摄影中，
-            他注重自然光线、建筑结构、材料质感与空间氛围，
-            同时保留纪实摄影对于真实现场的敏感性，
-            使建筑不只是一个被展示的对象，
-            而成为具有时间感和叙事性的场所。
-
-        </p>
+            </p>
 
 
-        <p>
+            <p>
 
-            他的空间摄影既服务于建筑、设计与酒店行业，
-            也延续了其作为纪实摄影师和艺术创作者
-            对现实空间的长期探索。
+                在长期的纪实摄影实践中，他形成了对空间独特的观察方式：
+                空间不仅是建筑本身，也是人的活动、时间、光线与地方文化
+                共同构成的视觉现场。与单纯记录建筑形式不同，
+                他更关注空间所承载的气息、尺度、秩序与生活痕迹，
+                并尝试通过摄影建立人与建筑之间的情感联系。
 
-        </p>
+            </p>
+
+
+            <p>
+
+                近年来，他将纪实摄影的观察方法延伸至酒店、民宿、
+                餐厅、艺术空间及建筑项目的拍摄。在商业空间摄影中，
+                他注重自然光线、建筑结构、材料质感与空间氛围，
+                同时保留纪实摄影对于真实现场的敏感性，
+                使建筑不只是一个被展示的对象，
+                而成为具有时间感和叙事性的场所。
+
+            </p>
+
+
+            <p>
+
+                他的空间摄影既服务于建筑、设计与酒店行业，
+                也延续了其作为纪实摄影师和艺术创作者
+                对现实空间的长期探索。
+
+            </p>
+
+
+        </div>
 
 
     </div>

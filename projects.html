@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>PROJECTS — XIAOCHEN SUN</title>
+
+<style>
+
+/* =========================
+   BASIC
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    background: #fff;
+
+    z-index: 1000;
+}
+
+.logo {
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    font-weight: 500;
+}
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   PROJECTS
+   ========================= */
+
+.projects {
+
+    padding: 120px 35px 60px 35px;
+}
+
+.page-title {
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   PROJECT GRID
+   ========================= */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 45px 25px;
+}
+
+.project {
+
+    text-decoration: none;
+
+    color: #111;
+
+    display: block;
+}
+
+.project-image {
+
+    width: 100%;
+
+    aspect-ratio: 3 / 2;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.project:hover img {
+
+    transform: scale(1.02);
+}
+
+.project-title {
+
+    margin-top: 13px;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        height: 60px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+
+        font-size: 15px;
+    }
+
+    nav {
+
+        gap: 15px;
+    }
+
+    nav a {
+
+        font-size: 11px;
+    }
+
+    .projects {
+
+        padding: 100px 20px 40px 20px;
+    }
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+     ========================= -->
+
+<header>
+
+    <div class="logo">
+        XIAOCHEN SUN
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="projects.html">
+            PROJECTS
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     PROJECTS
+     ========================= -->
+
+<main class="projects">
+
+    <div class="page-title">
+        PROJECTS
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <!-- PROJECT 01 -->
+
+        <a
+            class="project"
+            href="#"
+        >
+
+            <div class="project-image">
+
+                <img
+                    src="images/project-01.jpg"
+                    alt="Commercial Photography Project"
+                >
+
+            </div>
+
+            <div class="project-title">
+                PROJECT 01
+            </div>
+
+        </a>
+
+
+
+        <!-- PROJECT 02 -->
+
+        <a
+            class="project"
+            href="#"
+        >
+
+            <div class="project-image">
+
+                <img
+                    src="images/project-02.jpg"
+                    alt="Commercial Photography Project"
+                >
+
+            </div>
+
+            <div class="project-title">
+                PROJECT 02
+            </div>
+
+        </a>
+
+
+
+        <!-- PROJECT 03 -->
+
+        <a
+            class="project"
+            href="#"
+        >
+
+            <div class="project-image">
+
+                <img
+                    src="images/project-03.jpg"
+                    alt="Commercial Photography Project"
+                >
+
+            </div>
+
+            <div class="project-title">
+                PROJECT 03
+            </div>
+
+        </a>
+
+
+    </div>
+
+</main>
+
+
+</body>
+
+</html>

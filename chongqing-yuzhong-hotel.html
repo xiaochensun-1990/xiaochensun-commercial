@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>重庆渝中酒店项目 — 矩空间摄影</title>
+
+
+<style>
+
+/* =========================
+   BASIC
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+
+    width: 100%;
+    min-height: 100%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #fff;
+
+    color: #111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    background: #fff;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+}
+
+
+.logo-cn {
+
+    font-family:
+        "LiSu",
+        "隶书",
+        "STLiti",
+        "FZLiShu-S01",
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: 7px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.logo-en {
+
+    margin-top: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2.1px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+.nav-item {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+
+    text-align: center;
+
+    width: max-content;
+}
+
+
+.nav-cn {
+
+    display: block;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.nav-en {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.nav-item:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   PROJECT PAGE
+   ========================= */
+
+.project-page {
+
+    padding-top: 125px;
+
+    padding-left: 35px;
+
+    padding-right: 35px;
+
+    padding-bottom: 70px;
+}
+
+
+/* =========================
+   PROJECT TITLE
+   ========================= */
+
+.project-title {
+
+    margin-bottom: 30px;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   PHOTO GRID
+   ========================= */
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   PHOTO
+   ========================= */
+
+.photo {
+
+    width: 100%;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.photo:hover img {
+
+    opacity: 0.75;
+}
+
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+
+.lightbox {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 40px;
+}
+
+
+.lightbox.active {
+
+    display: flex;
+}
+
+
+.lightbox img {
+
+    max-width: 95vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   CLOSE
+   ========================= */
+
+.close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    color: #fff;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        height: 78px;
+
+        padding: 0 18px;
+    }
+
+
+    .logo-cn {
+
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .logo-en {
+
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
+
+    nav {
+
+        gap: 16px;
+    }
+
+
+    .nav-cn {
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .nav-en {
+
+        margin-top: 4px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.7px;
+    }
+
+
+    .project-page {
+
+        padding-top: 105px;
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        padding-bottom: 40px;
+    }
+
+
+    .project-title {
+
+        font-size: 14px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .lightbox {
+
+        padding: 15px;
+    }
+
+
+    .lightbox img {
+
+        max-width: 100vw;
+
+        max-height: 90vh;
+    }
+
+
+    .close {
+
+        top: 15px;
+
+        right: 20px;
+
+        font-size: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+     ========================= -->
+
+<header>
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <div class="logo-cn">
+                矩空间摄影
+            </div>
+
+            <div class="logo-en">
+                Gnomon Space Photography
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+
+        <a
+            class="nav-item"
+            href="projects.html"
+        >
+
+            <div class="nav-cn">
+                酒店 / 民宿 / 建筑
+            </div>
+
+            <div class="nav-en">
+                COMMERCIAL SPACE
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="about.html"
+        >
+
+            <div class="nav-cn">
+                关于
+            </div>
+
+            <div class="nav-en">
+                ABOUT
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="contact.html"
+        >
+
+            <div class="nav-cn">
+                联系
+            </div>
+
+            <div class="nav-en">
+                CONTACT
+            </div>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     PROJECT
+     ========================= -->
+
+<main class="project-page">
+
+
+    <div class="project-title">
+        重庆渝中酒店项目
+    </div>
+
+
+    <div class="photo-grid">
+
+
+        <!-- 01 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-01.jpeg"
+                alt="重庆渝中酒店项目 01"
+            >
+
+        </div>
+
+
+        <!-- 02 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-02.jpeg"
+                alt="重庆渝中酒店项目 02"
+            >
+
+        </div>
+
+
+        <!-- 03 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-03.jpeg"
+                alt="重庆渝中酒店项目 03"
+            >
+
+        </div>
+
+
+        <!-- 04 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-04.jpeg"
+                alt="重庆渝中酒店项目 04"
+            >
+
+        </div>
+
+
+        <!-- 05 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-05.jpeg"
+                alt="重庆渝中酒店项目 05"
+            >
+
+        </div>
+
+
+        <!-- 06 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-06.jpeg"
+                alt="重庆渝中酒店项目 06"
+            >
+
+        </div>
+
+
+        <!-- 07 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-07.jpeg"
+                alt="重庆渝中酒店项目 07"
+            >
+
+        </div>
+
+
+        <!-- 08 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-08.jpeg"
+                alt="重庆渝中酒店项目 08"
+            >
+
+        </div>
+
+
+        <!-- 09 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-09.jpeg"
+                alt="重庆渝中酒店项目 09"
+            >
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-10.jpeg"
+                alt="重庆渝中酒店项目 10"
+            >
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-11.jpeg"
+                alt="重庆渝中酒店项目 11"
+            >
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-12.jpeg"
+                alt="重庆渝中酒店项目 12"
+            >
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-13.jpeg"
+                alt="重庆渝中酒店项目 13"
+            >
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-14.jpeg"
+                alt="重庆渝中酒店项目 14"
+            >
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-15.jpeg"
+                alt="重庆渝中酒店项目 15"
+            >
+
+        </div>
+
+
+        <!-- 16 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-16.jpeg"
+                alt="重庆渝中酒店项目 16"
+            >
+
+        </div>
+
+
+        <!-- 17 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-17.jpeg"
+                alt="重庆渝中酒店项目 17"
+            >
+
+        </div>
+
+
+        <!-- 18 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-18.jpeg"
+                alt="重庆渝中酒店项目 18"
+            >
+
+        </div>
+
+
+        <!-- 19 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-19.jpeg"
+                alt="重庆渝中酒店项目 19"
+            >
+
+        </div>
+
+
+        <!-- 20 -->
+
+        <div
+            class="photo"
+            onclick="openLightbox(this)"
+        >
+
+            <img
+                src="chongqing-yuzhong-hotel/ayl-20.jpeg"
+                alt="重庆渝中酒店项目 20"
+            >
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================
+     LIGHTBOX
+     ========================= -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox()"
+>
+
+
+    <div
+        class="close"
+        onclick="closeLightbox()"
+    >
+        ×
+    </div>
+
+
+    <img
+        id="lightbox-image"
+        src=""
+        alt=""
+    >
+
+</div>
+
+
+
+<script>
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+
+function openLightbox(element) {
+
+    const image =
+        element.querySelector("img");
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightbox-image");
+
+
+    lightboxImage.src =
+        image.src;
+
+
+    lightboxImage.alt =
+        image.alt;
+
+
+    lightbox.classList.add("active");
+}
+
+
+function closeLightbox() {
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    lightbox.classList.remove("active");
+}
+
+
+/* =========================
+   ESC KEY
+   ========================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

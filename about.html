@@ -22,7 +22,10 @@ body {
     width: 100%;
     min-height: 100%;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background: #fff;
     color: #111;
@@ -183,31 +186,44 @@ nav {
 
 
 /* =========================
-   ABOUT
+   ABOUT PAGE
    ========================= */
 
 .about-page {
 
+    max-width: 1250px;
+
+    margin: 0 auto;
+
     padding-top: 145px;
 
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 45px;
+    padding-right: 45px;
 
-    padding-bottom: 80px;
+    padding-bottom: 90px;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        minmax(320px, 0.9fr)
+        minmax(450px, 1.1fr);
 
-    gap: 70px;
+    column-gap: 90px;
 
-    max-width: 1200px;
-
-    margin: 0 auto;
+    align-items: start;
 }
 
 
-/* PORTRAIT */
+/* =========================
+   PORTRAIT
+   ========================= */
+
+.about-photo {
+
+    width: 100%;
+
+    padding-top: 5px;
+}
 
 .about-photo img {
 
@@ -219,35 +235,64 @@ nav {
 }
 
 
-/* TEXT */
+/* =========================
+   TEXT
+   ========================= */
 
 .about-text {
 
-    padding-top: 5px;
+    padding-top: 0;
 }
 
 .about-title {
 
     font-size: 18px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 
     font-weight: 500;
 
     margin-bottom: 35px;
 }
 
-.about-text p {
+
+/* CHINESE */
+
+.about-cn {
 
     font-size: 14px;
 
     line-height: 2;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 
-    margin-bottom: 24px;
+    margin-bottom: 55px;
 
-    max-width: 520px;
+    max-width: 620px;
+}
+
+.about-cn p {
+
+    margin-bottom: 22px;
+}
+
+
+/* ENGLISH */
+
+.about-en {
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    letter-spacing: 0.15px;
+
+    max-width: 620px;
+}
+
+.about-en p {
+
+    margin-bottom: 22px;
 }
 
 
@@ -255,7 +300,7 @@ nav {
    MOBILE
    ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     header {
 
@@ -264,12 +309,14 @@ nav {
         padding: 0 18px;
     }
 
+
     .logo-cn {
 
         font-size: 25px;
 
         letter-spacing: 4px;
     }
+
 
     .logo-en {
 
@@ -280,10 +327,12 @@ nav {
         letter-spacing: 1.3px;
     }
 
+
     nav {
 
         gap: 16px;
     }
+
 
     .nav-cn {
 
@@ -291,6 +340,7 @@ nav {
 
         letter-spacing: 0.5px;
     }
+
 
     .nav-en {
 
@@ -301,33 +351,49 @@ nav {
         letter-spacing: 0.7px;
     }
 
+
     .about-page {
+
+        display: block;
 
         padding-top: 110px;
 
-        padding-left: 18px;
-        padding-right: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
 
-        display: block;
+        padding-bottom: 50px;
     }
+
 
     .about-photo {
 
         margin-bottom: 35px;
     }
 
+
     .about-title {
 
         font-size: 16px;
 
-        margin-bottom: 25px;
+        margin-bottom: 28px;
     }
 
-    .about-text p {
+
+    .about-cn {
 
         font-size: 13px;
 
         line-height: 1.9;
+
+        margin-bottom: 40px;
+    }
+
+
+    .about-en {
+
+        font-size: 12px;
+
+        line-height: 1.8;
     }
 
 }
@@ -340,7 +406,12 @@ nav {
 <body>
 
 
+<!-- =========================
+     HEADER
+     ========================= -->
+
 <header>
+
 
     <div class="logo">
 
@@ -357,6 +428,7 @@ nav {
         </a>
 
     </div>
+
 
 
     <nav>
@@ -378,6 +450,7 @@ nav {
         </a>
 
 
+
         <a
             class="nav-item"
             href="about.html"
@@ -392,6 +465,7 @@ nav {
             </div>
 
         </a>
+
 
 
         <a
@@ -412,12 +486,19 @@ nav {
 
     </nav>
 
+
 </header>
 
 
 
+<!-- =========================
+     ABOUT
+     ========================= -->
+
 <main class="about-page">
 
+
+    <!-- PORTRAIT -->
 
     <div class="about-photo">
 
@@ -430,52 +511,133 @@ nav {
 
 
 
+    <!-- TEXT -->
+
     <div class="about-text">
 
 
         <div class="about-title">
-
             ABOUT
+        </div>
+
+
+
+        <!-- =====================
+             中文
+             ===================== -->
+
+        <div class="about-cn">
+
+
+            <p>
+
+                <strong>Tom Sun</strong> 毕业于西南石油大学，
+                获地质工程硕士学位。长期从事纪实摄影与视觉创作，
+                作品关注地域、建筑、人的生活以及社会环境之间的关系，
+                并发表于国内外媒体及出版物。
+
+            </p>
+
+
+            <p>
+
+                在长期的纪实摄影实践中，他形成了对空间独特的观察方式：
+                空间不仅是建筑本身，也是人的活动、时间、光线与地方文化
+                共同构成的视觉现场。与单纯记录建筑形式不同，
+                他更关注空间所承载的气息、尺度、秩序与生活痕迹，
+                并尝试通过摄影建立人与建筑之间的情感联系。
+
+            </p>
+
+
+            <p>
+
+                近年来，他将纪实摄影的观察方法延伸至酒店、民宿、
+                餐厅、艺术空间及建筑项目的拍摄。在商业空间摄影中，
+                他注重自然光线、建筑结构、材料质感与空间氛围，
+                同时保留纪实摄影对于真实现场的敏感性，
+                使建筑不只是一个被展示的对象，
+                而成为具有时间感和叙事性的场所。
+
+            </p>
+
+
+            <p>
+
+                他的空间摄影既服务于建筑、设计与酒店行业，
+                也延续了其作为纪实摄影师和艺术创作者
+                对现实空间的长期探索。
+
+            </p>
+
 
         </div>
 
 
-        <p>
 
-            XIAOCHEN SUN is a documentary and
-            commercial photographer based in China.
+        <!-- =====================
+             ENGLISH
+             ===================== -->
 
-        </p>
-
-
-        <p>
-
-            His photographic practice focuses on
-            architecture, hotels, hospitality spaces,
-            interiors and the relationship between
-            people and the spaces they inhabit.
-
-        </p>
+        <div class="about-en">
 
 
-        <p>
+            <p>
 
-            With a background in documentary
-            photography, he brings an observational
-            approach to commercial space photography,
-            paying particular attention to natural light,
-            atmosphere, structure and human presence.
+                <strong>Tom Sun</strong> holds a Master's degree
+                in Geological Engineering from Southwest Petroleum
+                University. He has worked extensively in documentary
+                photography and visual art, with a practice centred
+                on the relationship between place, architecture,
+                people and their surrounding environments.
+                His work has been published internationally across
+                media and photographic publications.
 
-        </p>
+            </p>
 
 
-        <p>
+            <p>
 
-            He works with hotels, restaurants,
-            architects, interior designers and
-            hospitality brands.
+                His approach to space photography has grown naturally
+                from his documentary practice. For Sun, a space is more
+                than architecture itself; it is a visual field shaped
+                by human activity, time, light and local culture.
+                Rather than simply recording architectural form,
+                he is interested in the atmosphere, scale, materiality
+                and traces of life within a place, using photography
+                to explore the relationship between people and the
+                spaces they inhabit.
 
-        </p>
+            </p>
+
+
+            <p>
+
+                In recent years, he has extended this documentary
+                approach into commercial photography, working across
+                hotels, boutique guesthouses, restaurants, art spaces
+                and architectural projects. He pays close attention
+                to natural light, architectural structure, materials
+                and atmosphere, while maintaining the observational
+                sensitivity developed through years of documentary work.
+
+            </p>
+
+
+            <p>
+
+                His approach seeks to move beyond straightforward
+                architectural representation. Through an attentive
+                and contemporary visual language, he presents spaces
+                as places with character, memory and narrative —
+                images that serve the needs of architects, designers
+                and hospitality brands while retaining the depth
+                and authenticity of documentary photography.
+
+            </p>
+
+
+        </div>
 
 
     </div>

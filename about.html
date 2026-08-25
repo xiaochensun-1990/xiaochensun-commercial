@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>关于 — 矩空间摄影</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fff;
+    color: #111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    background: #fff;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+}
+
+.logo-cn {
+
+    font-family:
+        "LiSu",
+        "隶书",
+        "STLiti",
+        "FZLiShu-S01",
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: 7px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.logo-en {
+
+    margin-top: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2.1px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+.nav-item {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+
+    text-align: center;
+
+    width: max-content;
+}
+
+.nav-cn {
+
+    display: block;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.nav-en {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-page {
+
+    padding-top: 145px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+
+    padding-bottom: 80px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* PORTRAIT */
+
+.about-photo img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* TEXT */
+
+.about-text {
+
+    padding-top: 5px;
+}
+
+.about-title {
+
+    font-size: 18px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+.about-text p {
+
+    font-size: 14px;
+
+    line-height: 2;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 24px;
+
+    max-width: 520px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        height: 78px;
+
+        padding: 0 18px;
+    }
+
+    .logo-cn {
+
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+    .logo-en {
+
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
+    nav {
+
+        gap: 16px;
+    }
+
+    .nav-cn {
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .nav-en {
+
+        margin-top: 4px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.7px;
+    }
+
+    .about-page {
+
+        padding-top: 110px;
+
+        padding-left: 18px;
+        padding-right: 18px;
+
+        display: block;
+    }
+
+    .about-photo {
+
+        margin-bottom: 35px;
+    }
+
+    .about-title {
+
+        font-size: 16px;
+
+        margin-bottom: 25px;
+    }
+
+    .about-text p {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <div class="logo-cn">
+                矩空间摄影
+            </div>
+
+            <div class="logo-en">
+                Gnomon Space Photography
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <nav>
+
+
+        <a
+            class="nav-item"
+            href="projects.html"
+        >
+
+            <div class="nav-cn">
+                酒店 / 民宿 / 建筑
+            </div>
+
+            <div class="nav-en">
+                COMMERCIAL SPACE
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="about.html"
+        >
+
+            <div class="nav-cn">
+                关于
+            </div>
+
+            <div class="nav-en">
+                ABOUT
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="contact.html"
+        >
+
+            <div class="nav-cn">
+                联系
+            </div>
+
+            <div class="nav-en">
+                CONTACT
+            </div>
+
+        </a>
+
+
+    </nav>
+
+</header>
+
+
+
+<main class="about-page">
+
+
+    <div class="about-photo">
+
+        <img
+            src="images/PORTRAIT.JPG"
+            alt="XIAOCHEN SUN"
+        >
+
+    </div>
+
+
+
+    <div class="about-text">
+
+
+        <div class="about-title">
+
+            ABOUT
+
+        </div>
+
+
+        <p>
+
+            XIAOCHEN SUN is a documentary and
+            commercial photographer based in China.
+
+        </p>
+
+
+        <p>
+
+            His photographic practice focuses on
+            architecture, hotels, hospitality spaces,
+            interiors and the relationship between
+            people and the spaces they inhabit.
+
+        </p>
+
+
+        <p>
+
+            With a background in documentary
+            photography, he brings an observational
+            approach to commercial space photography,
+            paying particular attention to natural light,
+            atmosphere, structure and human presence.
+
+        </p>
+
+
+        <p>
+
+            He works with hotels, restaurants,
+            architects, interior designers and
+            hospitality brands.
+
+        </p>
+
+
+    </div>
+
+
+</main>
+
+
+</body>
+
+</html>

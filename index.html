@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
 
@@ -56,13 +56,13 @@ header {
     left: 0;
 
     width: 100%;
-    height: 70px;
+    height: 80px;
 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 
-    padding: 0 35px;
+    padding: 18px 35px;
 
     background: #fff;
 
@@ -124,21 +124,59 @@ nav {
 
     display: flex;
 
-    gap: 30px;
+    align-items: flex-start;
+
+    gap: 38px;
 }
 
-nav a {
+
+/* Each navigation item */
+
+.nav-item {
+
+    display: block;
 
     text-decoration: none;
 
     color: #111;
 
+    text-align: left;
+}
+
+
+/* Chinese navigation */
+
+.nav-cn {
+
     font-size: 13px;
 
     letter-spacing: 1px;
+
+    font-weight: 400;
+
+    line-height: 1;
 }
 
-nav a:hover {
+
+/* English navigation */
+
+.nav-en {
+
+    margin-top: 6px;
+
+    font-size: 7px;
+
+    letter-spacing: 1.2px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.nav-item:hover {
 
     opacity: 0.5;
 }
@@ -154,7 +192,7 @@ nav a:hover {
 
     height: 100vh;
 
-    padding-top: 70px;
+    padding-top: 80px;
 
     display: flex;
 
@@ -183,9 +221,9 @@ nav a:hover {
 
     header {
 
-        height: 60px;
+        height: 65px;
 
-        padding: 0 20px;
+        padding: 14px 20px;
     }
 
 
@@ -215,9 +253,18 @@ nav a:hover {
         gap: 15px;
     }
 
-    nav a {
+    .nav-cn {
 
-        font-size: 11px;
+        font-size: 10px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .nav-en {
+
+        margin-top: 4px;
+
+        font-size: 6px;
 
         letter-spacing: 0.8px;
     }
@@ -227,7 +274,7 @@ nav a:hover {
 
     .hero {
 
-        padding-top: 60px;
+        padding-top: 65px;
     }
 
 }
@@ -266,21 +313,67 @@ nav a:hover {
     </div>
 
 
+
     <!-- NAVIGATION -->
 
     <nav>
 
-        <a href="projects.html">
-            PROJECTS
+
+        <!-- COMMERCIAL SPACE -->
+
+        <a
+            class="nav-item"
+            href="projects.html"
+        >
+
+            <div class="nav-cn">
+                酒店 / 民宿 / 建筑
+            </div>
+
+            <div class="nav-en">
+                COMMERCIAL SPACE
+            </div>
+
         </a>
 
-        <a href="about.html">
-            ABOUT
+
+
+        <!-- ABOUT -->
+
+        <a
+            class="nav-item"
+            href="about.html"
+        >
+
+            <div class="nav-cn">
+                关于
+            </div>
+
+            <div class="nav-en">
+                ABOUT
+            </div>
+
         </a>
 
-        <a href="contact.html">
-            CONTACT
+
+
+        <!-- CONTACT -->
+
+        <a
+            class="nav-item"
+            href="contact.html"
+        >
+
+            <div class="nav-cn">
+                联系
+            </div>
+
+            <div class="nav-en">
+                CONTACT
+            </div>
+
         </a>
+
 
     </nav>
 

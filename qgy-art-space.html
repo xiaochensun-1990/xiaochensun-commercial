@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>千高原艺术空间 — 矩空间摄影</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #fff;
+    color: #111;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    background: #fff;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo a {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+}
+
+.logo-cn {
+
+    font-family:
+        "LiSu",
+        "隶书",
+        "STLiti",
+        "FZLiShu-S01",
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: 7px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.logo-en {
+
+    margin-top: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2.1px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+.nav-item {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
+
+    text-align: center;
+
+    width: max-content;
+}
+
+.nav-cn {
+
+    display: block;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.nav-en {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+.nav-item:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   PROJECT PAGE
+   ========================= */
+
+.project-page {
+
+    padding-top: 125px;
+
+    padding-left: 35px;
+
+    padding-right: 35px;
+
+    padding-bottom: 70px;
+}
+
+
+/* =========================
+   PROJECT TITLE
+   ========================= */
+
+.project-title {
+
+    margin-bottom: 30px;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   PHOTO GRID
+   ========================= */
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   PHOTO
+   ========================= */
+
+.photo {
+
+    width: 100%;
+
+    display: block;
+
+    cursor: pointer;
+}
+
+.photo img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+.photo:hover img {
+    opacity: 0.75;
+}
+
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+
+.lightbox {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 40px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+
+    max-width: 95vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   CLOSE
+   ========================= */
+
+.close {
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    color: #fff;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        height: 78px;
+
+        padding: 0 18px;
+    }
+
+    .logo-cn {
+
+        font-size: 25px;
+
+        letter-spacing: 4px;
+    }
+
+    .logo-en {
+
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .nav-cn {
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+    }
+
+    .nav-en {
+
+        margin-top: 4px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.7px;
+    }
+
+    .project-page {
+
+        padding-top: 105px;
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+        padding-bottom: 40px;
+    }
+
+    .project-title {
+
+        font-size: 14px;
+
+        margin-bottom: 20px;
+    }
+
+    .photo-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .lightbox {
+
+        padding: 15px;
+    }
+
+    .lightbox img {
+
+        max-width: 100vw;
+
+        max-height: 90vh;
+    }
+
+    .close {
+
+        top: 15px;
+
+        right: 20px;
+
+        font-size: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <div class="logo-cn">
+                矩空间摄影
+            </div>
+
+            <div class="logo-en">
+                Gnomon Space Photography
+            </div>
+
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a
+            class="nav-item"
+            href="projects.html"
+        >
+
+            <div class="nav-cn">
+                酒店 / 民宿 / 建筑
+            </div>
+
+            <div class="nav-en">
+                COMMERCIAL SPACE
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="about.html"
+        >
+
+            <div class="nav-cn">
+                关于
+            </div>
+
+            <div class="nav-en">
+                ABOUT
+            </div>
+
+        </a>
+
+
+        <a
+            class="nav-item"
+            href="contact.html"
+        >
+
+            <div class="nav-cn">
+                联系
+            </div>
+
+            <div class="nav-en">
+                CONTACT
+            </div>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="project-page">
+
+    <div class="project-title">
+        千高原艺术空间
+    </div>
+
+
+    <div class="photo-grid">
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-01.JPG"
+                alt="千高原艺术空间 01"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-02.JPG"
+                alt="千高原艺术空间 02"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-03.JPG"
+                alt="千高原艺术空间 03"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-04.JPG"
+                alt="千高原艺术空间 04"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-05.JPG"
+                alt="千高原艺术空间 05"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-06.JPG"
+                alt="千高原艺术空间 06"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-07.JPG"
+                alt="千高原艺术空间 07"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-08.JPG"
+                alt="千高原艺术空间 08"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-09.JPG"
+                alt="千高原艺术空间 09"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-10.JPG"
+                alt="千高原艺术空间 10"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-11.JPG"
+                alt="千高原艺术空间 11"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-12.JPG"
+                alt="千高原艺术空间 12"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-13.JPG"
+                alt="千高原艺术空间 13"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-14.JPG"
+                alt="千高原艺术空间 14"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-15.JPG"
+                alt="千高原艺术空间 15"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-16.JPG"
+                alt="千高原艺术空间 16"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-17.JPG"
+                alt="千高原艺术空间 17"
+            >
+        </div>
+
+
+        <div class="photo" onclick="openLightbox(this)">
+            <img
+                src="qgy-art-space/qgy-18.JPG"
+                alt="千高原艺术空间 18"
+            >
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox()"
+>
+
+    <div
+        class="close"
+        onclick="closeLightbox()"
+    >
+        ×
+    </div>
+
+
+    <img
+        id="lightbox-image"
+        src=""
+        alt=""
+    >
+
+</div>
+
+
+
+<script>
+
+function openLightbox(element) {
+
+    const image =
+        element.querySelector("img");
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightbox-image");
+
+
+    lightboxImage.src =
+        image.src;
+
+    lightboxImage.alt =
+        image.alt;
+
+    lightbox.classList.add("active");
+}
+
+
+function closeLightbox() {
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    lightbox.classList.remove("active");
+}
+
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

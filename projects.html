@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
 
@@ -10,7 +10,8 @@
     content="width=device-width, initial-scale=1.0"
 >
 
-<title>PROJECTS — XIAOCHEN SUN</title>
+<title>商业空间 — 矩空间摄影</title>
+
 
 <style>
 
@@ -26,9 +27,15 @@
 
 html,
 body {
+
     width: 100%;
     min-height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background: #fff;
     color: #111;
 }
@@ -50,10 +57,12 @@ header {
     left: 0;
 
     width: 100%;
-    height: 70px;
+    height: 90px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 35px;
@@ -63,35 +72,135 @@ header {
     z-index: 1000;
 }
 
-.logo {
 
-    font-size: 18px;
+/* =========================
+   LOGO
+   ========================= */
 
-    letter-spacing: 1px;
+.logo a {
 
-    font-weight: 500;
+    display: block;
+
+    text-decoration: none;
+
+    color: #111;
 }
+
+
+.logo-cn {
+
+    font-family:
+        "LiSu",
+        "隶书",
+        "STLiti",
+        "FZLiShu-S01",
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: 7px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.logo-en {
+
+    margin-top: 8px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2.1px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
 
 nav {
 
     display: flex;
 
-    gap: 30px;
+    align-items: center;
+
+    gap: 45px;
 }
 
-nav a {
+
+.nav-item {
+
+    display: block;
 
     text-decoration: none;
 
     color: #111;
 
-    font-size: 13px;
+    text-align: center;
 
-    letter-spacing: 1px;
+    width: max-content;
 }
 
-nav a:hover {
 
+.nav-cn {
+
+    display: block;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.nav-en {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.nav-item:hover {
     opacity: 0.5;
 }
 
@@ -102,16 +211,11 @@ nav a:hover {
 
 .projects {
 
-    padding: 120px 35px 60px 35px;
-}
+    padding-top: 125px;
 
-.page-title {
-
-    font-size: 13px;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 45px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 60px;
 }
 
 
@@ -123,19 +227,32 @@ nav a:hover {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    gap: 45px 25px;
+    column-gap: 25px;
+
+    row-gap: 55px;
 }
 
+
+/* =========================
+   PROJECT CARD
+   ========================= */
+
 .project {
+
+    display: block;
 
     text-decoration: none;
 
     color: #111;
-
-    display: block;
 }
+
+
+/* =========================
+   PROJECT IMAGE
+   ========================= */
 
 .project-image {
 
@@ -145,8 +262,9 @@ nav a:hover {
 
     overflow: hidden;
 
-    background: #eee;
+    background: #f2f2f2;
 }
+
 
 .project-image img {
 
@@ -154,25 +272,40 @@ nav a:hover {
 
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
 
-    transition: transform 0.5s ease;
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
 }
+
+
+/* =========================
+   HOVER
+   ========================= */
 
 .project:hover img {
 
-    transform: scale(1.02);
+    transform: scale(1.025);
 }
+
+
+/* =========================
+   PROJECT TITLE
+   ========================= */
 
 .project-title {
 
     margin-top: 13px;
 
-    font-size: 12px;
+    font-size: 14px;
 
     letter-spacing: 1px;
+
+    font-weight: 500;
+
+    text-align: left;
 }
 
 
@@ -184,36 +317,78 @@ nav a:hover {
 
     header {
 
-        height: 60px;
+        height: 78px;
 
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
-    .logo {
 
-        font-size: 15px;
+    .logo-cn {
+
+        font-size: 25px;
+
+        letter-spacing: 4px;
     }
+
+
+    .logo-en {
+
+        margin-top: 6px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
 
     nav {
 
-        gap: 15px;
+        gap: 16px;
     }
 
-    nav a {
+
+    .nav-cn {
 
         font-size: 11px;
+
+        letter-spacing: 0.5px;
     }
+
+
+    .nav-en {
+
+        margin-top: 4px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.7px;
+    }
+
+
+    /* PROJECT GRID */
 
     .projects {
 
-        padding: 100px 20px 40px 20px;
+        padding-top: 105px;
+
+        padding-left: 18px;
+        padding-right: 18px;
     }
+
 
     .project-grid {
 
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        row-gap: 40px;
+    }
+
+
+    .project-title {
+
+        font-size: 12px;
+
+        margin-top: 9px;
     }
 
 }
@@ -232,26 +407,82 @@ nav a:hover {
 
 <header>
 
+
+    <!-- LOGO -->
+
     <div class="logo">
-        XIAOCHEN SUN
+
+        <a href="index.html">
+
+            <div class="logo-cn">
+                矩空间摄影
+            </div>
+
+            <div class="logo-en">
+                Gnomon Space Photography
+            </div>
+
+        </a>
+
     </div>
+
+
+    <!-- NAVIGATION -->
 
     <nav>
 
-        <a href="index.html">
-            HOME
+
+        <!-- COMMERCIAL SPACE -->
+
+        <a
+            class="nav-item"
+            href="projects.html"
+        >
+
+            <div class="nav-cn">
+                酒店 / 民宿 / 建筑
+            </div>
+
+            <div class="nav-en">
+                COMMERCIAL SPACE
+            </div>
+
         </a>
 
-        <a href="projects.html">
-            PROJECTS
+
+        <!-- ABOUT -->
+
+        <a
+            class="nav-item"
+            href="about.html"
+        >
+
+            <div class="nav-cn">
+                关于
+            </div>
+
+            <div class="nav-en">
+                ABOUT
+            </div>
+
         </a>
 
-        <a href="about.html">
-            ABOUT
-        </a>
 
-        <a href="contact.html">
-            CONTACT
+        <!-- CONTACT -->
+
+        <a
+            class="nav-item"
+            href="contact.html"
+        >
+
+            <div class="nav-cn">
+                联系
+            </div>
+
+            <div class="nav-en">
+                CONTACT
+            </div>
+
         </a>
 
     </nav>
@@ -266,80 +497,160 @@ nav a:hover {
 
 <main class="projects">
 
-    <div class="page-title">
-        PROJECTS
-    </div>
-
 
     <div class="project-grid">
 
 
-        <!-- PROJECT 01 -->
+        <!-- =====================
+             PROJECT 01
+             ===================== -->
 
         <a
             class="project"
-            href="#"
+            href="chongqing-yuzhong-hotel.html"
         >
 
             <div class="project-image">
 
                 <img
-                    src="images/project-01.jpg"
-                    alt="Commercial Photography Project"
+                    src="projects/chongqing-yuzhong-hotel/ayl-20.jpeg"
+                    alt="重庆渝中酒店项目"
                 >
 
             </div>
 
             <div class="project-title">
-                PROJECT 01
+                重庆渝中酒店项目
             </div>
 
         </a>
 
 
 
-        <!-- PROJECT 02 -->
+        <!-- =====================
+             PROJECT 02
+             ===================== -->
 
         <a
             class="project"
-            href="#"
+            href="qgy-art-space.html"
         >
 
             <div class="project-image">
 
                 <img
-                    src="images/project-02.jpg"
-                    alt="Commercial Photography Project"
+                    src="projects/qgy-art-space/qgy-12.JPG"
+                    alt="千高原艺术空间"
                 >
 
             </div>
 
             <div class="project-title">
-                PROJECT 02
+                千高原艺术空间
             </div>
 
         </a>
 
 
 
-        <!-- PROJECT 03 -->
+        <!-- =====================
+             PROJECT 03
+             ===================== -->
 
         <a
             class="project"
-            href="#"
+            href="qingcheng-front-mountain.html"
         >
 
             <div class="project-image">
 
                 <img
-                    src="images/project-03.jpg"
-                    alt="Commercial Photography Project"
+                    src="projects/qingcheng-front-mountain/jjsj-12.jpeg"
+                    alt="青城前山民宿"
                 >
 
             </div>
 
             <div class="project-title">
-                PROJECT 03
+                青城前山民宿
+            </div>
+
+        </a>
+
+
+
+        <!-- =====================
+             PROJECT 04
+             ===================== -->
+
+        <a
+            class="project"
+            href="qingcheng-villa.html"
+        >
+
+            <div class="project-image">
+
+                <img
+                    src="projects/qingcheng-villa/xw-05.jpeg"
+                    alt="青城山独栋民宿"
+                >
+
+            </div>
+
+            <div class="project-title">
+                青城山独栋民宿
+            </div>
+
+        </a>
+
+
+
+        <!-- =====================
+             PROJECT 05
+             ===================== -->
+
+        <a
+            class="project"
+            href="wushi-hui.html"
+        >
+
+            <div class="project-image">
+
+                <img
+                    src="projects/wushi-hui/wsh-02.jpeg"
+                    alt="成都吴氏荟餐厅项目"
+                >
+
+            </div>
+
+            <div class="project-title">
+                成都吴氏荟餐厅项目
+            </div>
+
+        </a>
+
+
+
+        <!-- =====================
+             PROJECT 06
+             ===================== -->
+
+        <a
+            class="project"
+            href="xiling-huashuiwan.html"
+        >
+
+            <div class="project-image">
+
+                <img
+                    src="projects/xiling-huashuiwan/xxl-06.jpeg"
+                    alt="西岭花水湾独栋民宿"
+                >
+
+            </div>
+
+            <div class="project-title">
+                西岭花水湾独栋民宿
             </div>
 
         </a>

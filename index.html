@@ -10,8 +10,7 @@
     content="width=device-width, initial-scale=1.0"
 >
 
-<title>矩空间摄影 — Gnomon Space Photography</title>
-
+<title>矩空间摄影 — G-STUDIO</title>
 
 <style>
 
@@ -27,6 +26,7 @@
 
 html,
 body {
+
     width: 100%;
     min-height: 100%;
 
@@ -36,10 +36,12 @@ body {
         sans-serif;
 
     background: #fff;
+
     color: #111;
 }
 
 body {
+
     overflow-x: hidden;
 }
 
@@ -56,10 +58,13 @@ header {
     left: 0;
 
     width: 100%;
+
     height: 90px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 0 35px;
@@ -74,70 +79,27 @@ header {
    LOGO
    ========================= */
 
+.logo {
+
+    display: block;
+
+    line-height: 0;
+}
+
 .logo a {
 
     display: block;
 
     text-decoration: none;
-
-    color: #111;
 }
 
+.logo img {
 
-/* =========================
-   CHINESE BRAND
-   ========================= */
+    display: block;
 
-.logo-cn {
+    width: 170px;
 
-    /*
-       优先使用隶书字体。
-       Windows / macOS / iOS
-       如果系统存在对应字体，
-       会优先显示真正的隶书。
-    */
-
-    font-family:
-        "LiSu",
-        "隶书",
-        "STLiti",
-        "FZLiShu-S01",
-        serif;
-
-    font-size: 34px;
-
-    letter-spacing: 7px;
-
-    font-weight: 400;
-
-    line-height: 1;
-
-    white-space: nowrap;
-}
-
-
-/* =========================
-   ENGLISH BRAND
-   ========================= */
-
-.logo-en {
-
-    margin-top: 8px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 11px;
-
-    letter-spacing: 2.1px;
-
-    font-weight: 700;
-
-    line-height: 1;
-
-    white-space: nowrap;
+    height: auto;
 }
 
 
@@ -154,9 +116,6 @@ nav {
     gap: 45px;
 }
 
-
-/* Each navigation item */
-
 .nav-item {
 
     display: block;
@@ -165,20 +124,13 @@ nav {
 
     color: #111;
 
-    text-align: left;
-
-    /*
-       让中文和英文从完全相同的
-       左侧起点开始。
-    */
+    text-align: center;
 
     width: max-content;
 }
 
 
-/* =========================
-   NAVIGATION — CHINESE
-   ========================= */
+/* Chinese navigation */
 
 .nav-cn {
 
@@ -192,26 +144,19 @@ nav {
 
     line-height: 1;
 
-    text-align: left;
+    text-align: center;
 
     white-space: nowrap;
 }
 
 
-/* =========================
-   NAVIGATION — ENGLISH
-   ========================= */
+/* English navigation */
 
 .nav-en {
 
     display: block;
 
     margin-top: 7px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
 
     font-size: 10px;
 
@@ -221,11 +166,13 @@ nav {
 
     line-height: 1;
 
-    text-align: left;
+    text-align: center;
 
     white-space: nowrap;
 }
 
+
+/* Hover */
 
 .nav-item:hover {
 
@@ -270,6 +217,9 @@ nav {
 
 @media (max-width: 700px) {
 
+
+    /* HEADER */
+
     header {
 
         height: 78px;
@@ -280,31 +230,21 @@ nav {
 
     /* LOGO */
 
-    .logo-cn {
+    .logo img {
 
-        font-size: 25px;
+        width: 125px;
 
-        letter-spacing: 4px;
-    }
-
-    .logo-en {
-
-        margin-top: 6px;
-
-        font-size: 8px;
-
-        letter-spacing: 1.3px;
-
-        font-weight: 700;
+        height: auto;
     }
 
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
 
         gap: 16px;
     }
+
 
     .nav-cn {
 
@@ -312,6 +252,7 @@ nav {
 
         letter-spacing: 0.5px;
     }
+
 
     .nav-en {
 
@@ -353,13 +294,10 @@ nav {
 
         <a href="index.html">
 
-            <div class="logo-cn">
-                矩空间摄影
-            </div>
-
-            <div class="logo-en">
-                Gnomon Space Photography
-            </div>
+            <img
+                src="Logo.png"
+                alt="矩空间摄影 G-STUDIO"
+            >
 
         </a>
 
@@ -443,7 +381,7 @@ nav {
 
     <img
         src="Home.JPG"
-        alt="Gnomon Space Photography"
+        alt="G-STUDIO Commercial Space Photography"
     >
 
 </section>

@@ -202,19 +202,44 @@ nav {
 
     padding-bottom: 100px;
 
-    display: block;
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+
+    align-items: start;
 }
 
 
 /* =========================
-   CONTACT CONTENT
+   LEFT
+   CONTACT INFORMATION
    ========================= */
 
-.contact-content {
+.contact-info {
 
-    width: 40%;
+    width: 100%;
 
-    max-width: 500px;
+    padding-right: 30px;
+
+    text-align: left;
+}
+
+
+/* =========================
+   CONTACT TITLE
+   ========================= */
+
+.contact-title {
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    margin-bottom: 50px;
 
     text-align: left;
 }
@@ -226,7 +251,7 @@ nav {
 
 .contact-item {
 
-    margin-bottom: 48px;
+    margin-bottom: 45px;
 
     text-align: left;
 }
@@ -246,7 +271,7 @@ nav {
 
     line-height: 1.3;
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
     text-align: left;
 }
@@ -283,10 +308,215 @@ nav {
 
 
 /* =========================
+   RIGHT
+   INQUIRY FORM
+   ========================= */
+
+.contact-form-area {
+
+    width: 100%;
+
+    padding-left: 30px;
+
+    padding-right: 0;
+
+    text-align: left;
+}
+
+
+/* =========================
+   FORM TITLE
+   ========================= */
+
+.form-title {
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    margin-bottom: 50px;
+
+    text-align: left;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.contact-form {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    text-align: left;
+}
+
+
+/* =========================
+   FORM GROUP
+   ========================= */
+
+.form-group {
+
+    width: 100%;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   FORM LABEL
+   ========================= */
+
+.form-group label {
+
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================
+   INPUT
+   ========================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    display: block;
+
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #bbb;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    color: #111;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    letter-spacing: 0.3px;
+
+    outline: none;
+}
+
+
+/* INPUT */
+
+.form-group input,
+.form-group select {
+
+    height: 40px;
+
+    padding: 0;
+}
+
+
+/* TEXTAREA */
+
+.form-group textarea {
+
+    height: 100px;
+
+    padding: 10px 0;
+
+    resize: vertical;
+
+    line-height: 1.7;
+}
+
+
+/* FOCUS */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-bottom: 1px solid #111;
+}
+
+
+/* =========================
+   SELECT
+   ========================= */
+
+.form-group select {
+
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+   ========================= */
+
+.submit-button {
+
+    margin-top: 12px;
+
+    padding: 13px 30px;
+
+    border: 1px solid #111;
+
+    background: #111;
+
+    color: #fff;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.submit-button:hover {
+
+    background: #fff;
+
+    color: #111;
+}
+
+
+/* =========================
    MOBILE
    ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     header {
 
@@ -338,45 +568,55 @@ nav {
     }
 
 
+    /* =====================
+       CONTACT MOBILE
+       ===================== */
+
     .contact-page {
 
-        padding-top: 115px;
+        display: block;
+
+        padding-top: 110px;
 
         padding-left: 20px;
 
         padding-right: 20px;
 
-        padding-bottom: 50px;
+        padding-bottom: 60px;
     }
 
 
-    .contact-content {
+    /* CONTACT INFORMATION */
+
+    .contact-info {
 
         width: 100%;
 
-        max-width: none;
+        padding-right: 0;
 
-        text-align: left;
+        margin-bottom: 65px;
+    }
+
+
+    .contact-title {
+
+        font-size: 16px;
+
+        margin-bottom: 35px;
     }
 
 
     .contact-item {
 
-        margin-bottom: 38px;
-
-        text-align: left;
+        margin-bottom: 35px;
     }
 
 
     .contact-label {
 
-        font-size: 17px;
-
-        letter-spacing: 1px;
+        font-size: 16px;
 
         margin-bottom: 9px;
-
-        text-align: left;
     }
 
 
@@ -385,8 +625,73 @@ nav {
         font-size: 14px;
 
         line-height: 1.8;
+    }
 
-        text-align: left;
+
+    /* FORM */
+
+    .contact-form-area {
+
+        width: 100%;
+
+        padding-left: 0;
+
+        padding-right: 0;
+    }
+
+
+    .form-title {
+
+        font-size: 16px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .contact-form {
+
+        width: 100%;
+
+        max-width: none;
+    }
+
+
+    .form-group {
+
+        margin-bottom: 25px;
+    }
+
+
+    .form-group label {
+
+        font-size: 11px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .form-group input,
+    .form-group select {
+
+        height: 38px;
+
+        font-size: 14px;
+    }
+
+
+    .form-group textarea {
+
+        height: 110px;
+    }
+
+
+    .submit-button {
+
+        margin-top: 10px;
+
+        padding: 12px 25px;
+
+        font-size: 10px;
     }
 
 }
@@ -481,18 +786,26 @@ nav {
 
 
 <!-- =========================
-     CONTACT
+     CONTACT PAGE
      ========================= -->
 
 <main class="contact-page">
 
 
-    <div class="contact-content">
+    <!-- =====================
+         LEFT
+         CONTACT INFORMATION
+         ===================== -->
+
+    <section class="contact-info">
 
 
-        <!-- =====================
-             PHONE
-             ===================== -->
+        <div class="contact-title">
+            矩空间摄影
+        </div>
+
+
+        <!-- PHONE -->
 
         <div class="contact-item">
 
@@ -517,10 +830,7 @@ nav {
         </div>
 
 
-
-        <!-- =====================
-             WECHAT
-             ===================== -->
+        <!-- WECHAT -->
 
         <div class="contact-item">
 
@@ -535,10 +845,7 @@ nav {
         </div>
 
 
-
-        <!-- =====================
-             EMAIL
-             ===================== -->
+        <!-- EMAIL -->
 
         <div class="contact-item">
 
@@ -557,7 +864,163 @@ nav {
         </div>
 
 
-    </div>
+    </section>
+
+
+
+    <!-- =====================
+         RIGHT
+         INQUIRY FORM
+         ===================== -->
+
+    <section class="contact-form-area">
+
+
+        <div class="form-title">
+            PROJECT INQUIRY
+        </div>
+
+
+        <form
+            class="contact-form"
+            action="https://forminit.com/f/y04808d9grl"
+            method="POST"
+        >
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    NAME / 姓名
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    EMAIL / 邮箱
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PROJECT TYPE -->
+
+            <div class="form-group">
+
+                <label for="project">
+                    PROJECT / 项目类型
+                </label>
+
+                <select
+                    id="project"
+                    name="project"
+                    required
+                >
+
+                    <option value="" selected disabled>
+                        Please select
+                    </option>
+
+                    <option value="Hotel">
+                        HOTEL / 酒店
+                    </option>
+
+                    <option value="Boutique Guesthouse">
+                        BOUTIQUE GUESTHOUSE / 民宿
+                    </option>
+
+                    <option value="Architecture">
+                        ARCHITECTURE / 建筑
+                    </option>
+
+                    <option value="Restaurant">
+                        RESTAURANT / 餐厅
+                    </option>
+
+                    <option value="Art Space">
+                        ART SPACE / 艺术空间
+                    </option>
+
+                    <option value="Other">
+                        OTHER / 其他
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="form-group">
+
+                <label for="location">
+                    LOCATION / 项目地点
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder=""
+                    required
+                >
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+                <label for="message">
+                    MESSAGE / 项目需求
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                SEND INQUIRY
+            </button>
+
+
+        </form>
+
+
+    </section>
 
 
 </main>

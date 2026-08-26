@@ -198,11 +198,17 @@ nav {
     padding-top: 145px;
 
     padding-left: 35px;
+
     padding-right: 35px;
 
     padding-bottom: 100px;
 
     display: grid;
+
+    /*
+       40% PRICE LIST
+       60% TEXT
+    */
 
     grid-template-columns: 40% 60%;
 
@@ -219,11 +225,11 @@ nav {
 
     width: 100%;
 
-    padding-right: 45px;
+    padding-right: 30px;
 
     display: flex;
 
-    justify-content: center;
+    justify-content: flex-start;
 
     align-items: flex-start;
 }
@@ -234,7 +240,7 @@ nav {
 
     width: 100%;
 
-    max-width: 520px;
+    max-width: none;
 
     height: auto;
 
@@ -250,13 +256,18 @@ nav {
 
     width: 100%;
 
-    max-width: 700px;
+    /*
+       Remove previous 700px limitation.
+       Let the text use the entire 60% column.
+    */
 
-    padding-left: 60px;
+    max-width: none;
 
-    padding-right: 30px;
+    padding-left: 30px;
 
-    margin-left: auto;
+    padding-right: 0;
+
+    margin-left: 0;
 
     text-align: left;
 }
@@ -286,21 +297,16 @@ nav {
 
     font-size: 14px;
 
-    line-height: 1.95;
+    line-height: 1.9;
 
     letter-spacing: 0.15px;
 
-    margin-bottom: 65px;
+    margin-bottom: 60px;
 }
 
 .about-en p {
 
     margin-bottom: 24px;
-}
-
-.about-en strong {
-
-    font-weight: 600;
 }
 
 
@@ -316,7 +322,7 @@ nav {
 
     background: #ddd;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 
@@ -334,7 +340,7 @@ nav {
 
     font-size: 14px;
 
-    line-height: 2;
+    line-height: 1.95;
 
     letter-spacing: 0;
 
@@ -348,11 +354,6 @@ nav {
 .about-cn p {
 
     margin-bottom: 24px;
-}
-
-.about-cn strong {
-
-    font-weight: 600;
 }
 
 
@@ -438,7 +439,7 @@ nav {
 
         padding-right: 0;
 
-        margin-bottom: 50px;
+        margin-bottom: 45px;
 
         display: block;
     }
@@ -457,6 +458,8 @@ nav {
     /* CONTENT */
 
     .about-content {
+
+        width: 100%;
 
         max-width: none;
 
@@ -505,10 +508,6 @@ nav {
         line-height: 1.9;
 
         letter-spacing: 0;
-
-        word-break: normal;
-
-        overflow-wrap: break-word;
     }
 
 
@@ -621,13 +620,13 @@ nav {
 
     <!-- =====================
          LEFT
-         PRICING
+         PRICE LIST
          ===================== -->
 
     <div class="about-left">
 
         <img
-            src="about.png?v=2"
+            src="about.png?v=3"
             alt="矩空间摄影价目表"
         >
 
@@ -656,36 +655,29 @@ nav {
 
 
             <p>
-
-                <strong>Tom Sun</strong> is the founder of
-                Gnomon Space Photography and has worked extensively
-                in documentary photography and visual creation.
-                His work explores the relationship between place,
-                architecture, everyday life and the social environment,
-                and has been published in media and photographic
-                publications in China and internationally.
-
+                Tom Sun is the founder of G-STUDIO and has worked
+                extensively in documentary photography and visual
+                creation. His work explores the relationship between
+                place, architecture, everyday life and the social
+                environment, and has been published in media and
+                photographic publications in China and internationally.
             </p>
 
 
             <p>
-
                 His long-term practice in documentary photography
                 has shaped a distinctive way of observing space.
                 For Sun, space is more than architecture itself;
-                it is a visual field shaped by human activity,
-                time, light and local culture. Rather than simply
-                documenting architectural form, he is interested in
-                the atmosphere, scale, order and traces of life that
-                a space carries, seeking to establish an emotional
-                connection between people and architecture through
-                photography.
-
+                it is a visual field shaped by human activity, time,
+                light and local culture. Rather than simply documenting
+                architectural form, he is interested in the atmosphere,
+                scale, order and traces of life that a space carries,
+                seeking to establish an emotional connection between
+                people and architecture through photography.
             </p>
 
 
             <p>
-
                 In recent years, he has extended this documentary
                 approach to the photography of hotels, boutique
                 guesthouses, restaurants, art spaces and architectural
@@ -695,19 +687,16 @@ nav {
                 retaining the sensitivity to real places developed
                 through his documentary practice. In this way,
                 architecture is not presented simply as an object,
-                but as a place with a sense of time, presence
-                and narrative.
-
+                but as a place with a sense of time, presence and
+                narrative.
             </p>
 
 
             <p>
-
                 His spatial photography serves the architecture,
                 design and hospitality industries, while continuing
                 his long-term exploration of physical space as a
                 documentary photographer and visual artist.
-
             </p>
 
 
@@ -727,44 +716,28 @@ nav {
 
 
             <p>
-
-                <strong>Tom Sun</strong> 是矩空间摄影主理人，
-                长期从事纪实摄影与视觉创作。作品关注地域、
-                建筑、人的生活以及社会环境之间的关系，
+                矩空间摄影主理人长期从事纪实摄影与视觉创作，
+                作品关注地域、建筑、人的生活以及社会环境之间的关系，
                 并发表于国内外媒体及出版物。
-
             </p>
 
 
             <p>
-
                 在长期的纪实摄影实践中，他形成了对空间独特的观察方式：
                 空间不仅是建筑本身，也是人的活动、时间、光线与地方文化
                 共同构成的视觉现场。与单纯记录建筑形式不同，
                 他更关注空间所承载的气息、尺度、秩序与生活痕迹，
                 并尝试通过摄影建立人与建筑之间的情感联系。
-
             </p>
 
 
             <p>
-
                 近年来，他将纪实摄影的观察方法延伸至酒店、民宿、
                 餐厅、艺术空间及建筑项目的拍摄。在商业空间摄影中，
                 他注重自然光线、建筑结构、材料质感与空间氛围，
                 同时保留纪实摄影对于真实现场的敏感性，
                 使建筑不只是一个被展示的对象，
                 而成为具有时间感和叙事性的场所。
-
-            </p>
-
-
-            <p>
-
-                他的空间摄影既服务于建筑、设计与酒店行业，
-                也延续了其作为纪实摄影师和艺术创作者
-                对现实空间的长期探索。
-
             </p>
 
 
